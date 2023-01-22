@@ -1,0 +1,43 @@
+﻿@model Book
+<div class="modal1 modal1-sm show ">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <div data-close id="clos" class="modal__close">
+                <i class="fas fa-close"></i>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <img src="assets/img/feature-collection/@Model.ImageUrl" class="w-100" alt="">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <h2 class="title geometric text-white ls-1">@Model.Name</h2>
+                    <span class="price">
+                        <span class="money text-fusion work-sans fw-bold fs-3">$@Model.Price</span>
+                    </span>
+                    <p class="description text-white pt-4">
+                        @Model.Description
+                    </p>
+                    <div class="variants_selects variants_margin">
+
+                        <div class="quickview-plus-minus d-flex align-items-center pt-4">
+                          
+                            <div class="quickview-btn-cart ps-4">
+                                <a  href="/basket/addbasket/@Model.Id"class="bg-grey px-3 py-2 hover3 t-5 border-0"
+                                        style="outline: none;color:white;text-decoration:none;"  >
+                                    Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+ <script>
+     let cls=document.getElementById("clos");
+     cls.addEventListener("click",()=>{
+         console.log("fg")
+        document.getElementById("formodalim").innerHTML = " ";
+    })
+ </script>
